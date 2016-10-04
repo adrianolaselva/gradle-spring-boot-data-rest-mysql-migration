@@ -1,9 +1,6 @@
 package hello;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Person {
@@ -14,6 +11,18 @@ public class Person {
 
 	private String firstName;
 	private String lastName;
+
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="id_profile", referencedColumnName="id")
+	private Profile profile;
+
+	public Profile getProfile(){
+		return this.profile;
+	} 
+
+	public void setProfile(Profile profile){
+		this.profile = profile;
+	}
 
 	public String getFirstName() {
 		return firstName;
