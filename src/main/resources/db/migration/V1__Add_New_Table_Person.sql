@@ -1,7 +1,9 @@
-CREATE TABLE T_PERSON (
-	id INT(10) AUTO_INCREMENT primary key,
-	first_name varchar(255) not null,
-	last_name varchar(255) not null
+
+create table person (
+	id int(10) not null auto_increment, 
+	first_name varchar(255) not null, 
+	last_name varchar(255) not null, 
+	primary key (id)
 );
 
-insert into T_PERSON (first_name, last_name) values ('Dave', 'Syer');
+insert into person (first_name, last_name) values ('Adriano', 'Moreira La Selva');
