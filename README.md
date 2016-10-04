@@ -49,6 +49,5 @@ gradle flywayClean
 V1__Add_New_Table_Person.sql
 
 
-
 [Documentação flyway gradle tasks](https://flywaydb.org/documentation/gradle).
 
